@@ -1,0 +1,16 @@
+<div>
+  <div>
+    <header>
+      {{ user.id }} - {{ user.name | circus}}
+    </header>
+    <section>
+      {{ user.birsday | date: 'MM-dd-yyyy'}}
+    </section>
+
+    <footer [ngSwitch]="user.role">
+      <span *ngSwitchCase="'admin'">Admin</span>
+      <span *ngSwitchCase="'moder'">Moder</span>
+      <span *ngSwitchCase="'user'">User</span>
+    </footer>
+  </div>
+</div>
