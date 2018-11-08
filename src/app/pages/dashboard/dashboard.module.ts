@@ -9,6 +9,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   imports: [
+    RouterModule,
     CommonModule,
     DashboardRoutingModule,
     SharedModule

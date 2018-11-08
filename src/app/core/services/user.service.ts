@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { User, UserRole, UserStatus } from '../model/user.model';
-import { promise } from 'protractor';
 import users from '../stubs/users';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,10 @@ import users from '../stubs/users';
 export class UserService {
   constructor() { }
 
-  getUsers() {
-    return Promise.resolve(users);
+  getUsers(): Observable<User[]> {
+    return of(users);
+  }
+  getUser(id: number) {
+    return of(users.find(user => user.id === id));
   }
 }

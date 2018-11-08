@@ -5,10 +5,12 @@ import { PagesModule } from './pages/pages.module';
 const routes: Routes = [];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    PagesModule
+  ],
   exports: [
     RouterModule,
-    PagesModule
   ]
 })
 export class AppRoutingModule { }

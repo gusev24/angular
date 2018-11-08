@@ -1,7 +1,7 @@
 <div appHighlight>
   <div>
     <header>
-      {{ user.id }} - {{ user.name | circus}}
+      <a [routerLink]="['user',user.id]">{{ user.id }} - {{ user.name | circus}}</a>
     </header>
     <section>
       {{ user.birsday | date: 'MM-dd-yyyy'}}
