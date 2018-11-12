@@ -1,0 +1,22 @@
+.card {
+  padding: 50px;
+  border: 1px solid blueviolet;
+  width: 400px;
+  .header {
+    padding: 20px;
+    border: 1px solid springgreen;
+    width: 200px;
+  }
+
+  .body {
+    padding: 20px;
+    border: 1px solid burlywood;
+    width: 200px;
+  }
+
+  .footer {
+    padding: 20px;
+    border: 1px solid orangered;
+    width: 200px;
+  }
+}

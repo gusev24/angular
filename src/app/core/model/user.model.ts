@@ -13,6 +13,17 @@ export interface User {
     id: number;
     name: string;
     role: UserRole;
-    birsday: Date;
+    birthday: Date;
     status: UserStatus;
+}
+
+
+export class User {
+  constructor (
+    public id: number,
+    public name: string,
+    public role: UserRole,
+    public birthday: Date,
+    public status: UserStatus
+  ) { }
 }

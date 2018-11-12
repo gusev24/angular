@@ -1,3 +1,20 @@
-<div>
-  <app-user [user]="user" *ngFor="let user of users"></app-user>
-</div>
+<app-card *ngFor="let user of users">
+  <ng-template appTemplate="header">
+    <a [routerLink]="['user', user.id]">{{ user.id }} - {{ user.name | circus }}</a>
+  </ng-template>
+  <ng-template appTemplate="body">
+    <div>
+      <span *ngIf="user.loggedIn">Logged In</span>
+    </div>
+    <div>
+      {{ user.birthday | date: 'MM-dd-yyyy' }}
+    </div>
+  </ng-template>
+  <ng-template appTemplate="footer">
+    <div [ngSwitch]="user.role">
+    <span *ngSwitchCase="'moder'">Moder</span>
+    <span *ngSwitchCase="'admin'">Admin</span>
+    <span *ngSwitchCase="'user'">User</span>
+    </div>
+  </ng-template>
+</app-card>

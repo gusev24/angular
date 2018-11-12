@@ -6,7 +6,7 @@ export default  [
       id: 1,
       name: 'Vasya',
       role: UserRole.ADMIN,
-      birsday: new Date(),
+      birthday: new Date(),
       status: UserStatus.ONLINE
 
     },
@@ -14,7 +14,7 @@ export default  [
       id: 2,
       name: 'Petya',
       role: UserRole.MODER,
-      birsday: new Date(),
+      birthday: new Date(),
       status: UserStatus.ONLINE
 
     },
@@ -22,7 +22,7 @@ export default  [
       id: 3,
       name: 'Grisgha',
       role: UserRole.USER,
-      birsday: new Date(),
+      birthday: new Date(),
       status: UserStatus.OFFLINE
 
     },
@@ -30,7 +30,7 @@ export default  [
       id: 4,
       name: 'Oleg',
       role: UserRole.USER,
-      birsday: new Date(),
+      birthday: new Date(),
       status: UserStatus.OFFLINE
 
     }

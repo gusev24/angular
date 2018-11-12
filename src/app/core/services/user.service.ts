@@ -1,18 +1,23 @@
 import { Injectable } from '@angular/core';
 import { User, UserRole, UserStatus } from '../model/user.model';
-import users from '../stubs/users';
+// import users from '../stubs/users';
 import { Observable, of } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  constructor() { }
 
-  getUsers(): Observable<User[]> {
-    return of(users);
+  resourceUrl = `${environment.apiUrl}/people/`;
+  constructor(
+    private httpClient: HttpClient
+  ) {
   }
-  getUser(id: number) {
-    return of(users.find(user => user.id === id));
+
+
+  getUsers() {
+    return this.httpClient.get(this.resourceUrl);
   }
 }

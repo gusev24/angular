@@ -8,22 +8,17 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit, OnDestroy {
-
   users = [];
   user$: Subscription;
-  constructor(
-    private userService: UserService
-  ) { }
+  constructor(private userService: UserService) {}
 
   ngOnInit() {
-    this.user$ = this.userService.getUsers()
-      .subscribe(users => {
-        this.users = users;
-      });
+    this.userService.getUsers().subscribe((users: any) => {
+      this.users = users;
+    });
   }
 
   ngOnDestroy() {
     this.user$.unsubscribe();
   }
-
 }

@@ -7,6 +7,7 @@ import { SharedModule } from './shared/shared.module';
 import { CircusPipe } from './shared/pipes/circus/circus.pipe';
 import { HighlightDirective } from './shared/directives/highlight/highlight.directive';
 import { CoreModule } from './core/core.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { CoreModule } from './core/core.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     SharedModule,
     CoreModule,
     AppRoutingModule

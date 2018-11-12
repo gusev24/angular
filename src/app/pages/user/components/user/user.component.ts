@@ -18,10 +18,10 @@ export class UserComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.route.params.subscribe(({ id}) => {
-      this.userService.getUser(Number(id))
-       .subscribe(user => this.user = user);
-    });
+    // this.route.params.subscribe(({ id}) => {
+    //   this.userService.getUser(Number(id))
+    //    .subscribe(user => this.user = user);
+    // });
   }
 
 }
